@@ -1,8 +1,6 @@
 package ru.coutvv.puzzle;
 
 /**
- * puzzle [  ]
- * 
  * why   ? 
  * fix	 ?   
  *
