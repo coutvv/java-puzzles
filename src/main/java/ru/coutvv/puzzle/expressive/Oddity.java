@@ -5,7 +5,7 @@ package ru.coutvv.puzzle.expressive;
  * fix	 ? n%2 != 0;
  *
  * moral : 
- * 			-
+ * 			- следите за знаками операндов, когда получаете осстаток
  *   
  * @author coutvv
  */
