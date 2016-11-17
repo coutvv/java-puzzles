@@ -1,4 +1,4 @@
-package ru.coutvv.puzzle;
+package ru.coutvv.puzzle.expressive;
 
 import java.math.BigDecimal;
 
