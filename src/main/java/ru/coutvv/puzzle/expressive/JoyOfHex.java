@@ -1,7 +1,7 @@
 package ru.coutvv.puzzle.expressive;
 
 /**
- * why   ? 0xcafebabe -- интовое число -889275714 оно конвертится в лонговое 0xffffffffcafebabeL и прибавляется 0x100000000L и получаем: 0xcafebabeL всё логично
+ * why   ? 0xcafebabe -- интовое число == -889275714 оно конвертится в лонговое 0xffffffffcafebabeL и прибавляется 0x100000000L и получаем: 0xcafebabeL всё логично
  * fix	 ? юзать L во втором операнде
  *
  * moral : 
