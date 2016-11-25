@@ -1,4 +1,4 @@
-package ru.coutvv.puzzle;
+package ru.coutvv.puzzle.loopy;
 
 /**
  * puzzle [ Loopy Behaviour ]
@@ -13,7 +13,7 @@ package ru.coutvv.puzzle;
  *   
  * @author coutvv
  */
-public class Loopy {
+public class InTheLoop {
 
 	public static void main(String[] args) {
 		final int start = Integer.MAX_VALUE -100;
