@@ -1,4 +1,4 @@
-package ru.coutvv.puzzle;
+package ru.coutvv.puzzle.exceptional;
 
 /**
  * puzzle [ What's in a Name? ]
