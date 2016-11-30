@@ -1,4 +1,4 @@
-package ru.coutvv.puzzle;
+package ru.coutvv.puzzle.classy;
 
 /**
  * puzzle [ all I get is static ]
@@ -16,21 +16,21 @@ package ru.coutvv.puzzle;
 public class Bark {
 	
 	public static void main(String[] args) {
-		Dog woofer = new Dog();
-		Dog nipper = new Basenji();
+		SomeDog woofer = new SomeDog();
+		SomeDog nipper = new Basenji();
 		//Basenji nipper = new Basenji(); //таким образом спрятаный сработает
 		woofer.bark();
 		nipper.bark();
 	}
 }
 
-class Dog {
+class SomeDog {
 	public static void bark() {
 		System.out.println("woof ");
 	}
 }
 
-class Basenji extends Dog {
+class Basenji extends SomeDog {
 	public static void bark() {}
 }
 

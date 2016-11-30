@@ -1,4 +1,4 @@
-package ru.coutvv.puzzle;
+package ru.coutvv.puzzle.classy;
 
 /**
  * puzzle [ The Case of the Confusing Constructor ]
