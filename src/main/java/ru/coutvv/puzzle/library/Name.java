@@ -1,4 +1,4 @@
-package ru.coutvv.puzzle;
+package ru.coutvv.puzzle.library;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -12,6 +12,7 @@ import java.util.Set;
  * 			- ВСЕГДА переопределяйте метод hashCode когда переопределяете метод equals
  * 			- соблюдайте контракты при переопределении метода 
  * 			- про/перечитайте Effective Java chapter 03  
+ * 			- при поиске в хешсете, сравниваются хэшкоды, ибо дешевле сравнения объектов
  * @author coutvv
  */
 public class Name {
