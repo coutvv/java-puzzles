@@ -3,11 +3,11 @@ package ru.coutvv.puzzle.classier.deal.hack;
 import ru.coutvv.puzzle.classier.deal.click.CodeTalk;
 
 /**
- * why   ? 
- * fix	 ?   
+ * why   ?  методы ограниченные пакетом не могут быть переопределены вне этого пакета
+ * fix	 ?  пометить переопределяемый метод в суперклассе как protected или public
  *
  * moral : 
- * 			-
+ * 			- тоже что и в fix... :peka:
  *   
  * @author coutvv
  */
