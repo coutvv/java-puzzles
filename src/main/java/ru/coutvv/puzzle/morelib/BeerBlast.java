@@ -9,21 +9,22 @@ import com.sun.xml.internal.ws.util.ReadAllStream;
 
 //незаконченый пазл
 /**
- * why   ? 
- * fix	 ?   
+ * why   ? deadlock он самый, да. Недостаточно буфера для песенки(например если уменьшим вывод -- всё норм станет)
+ * fix	 ? фигачим паралельный поток, который читает из потока
  *
  * moral : 
- * 			-
+ * 			- необходимо дренировать(что?) поток вывода дочернего процесса чтобы обеспечить его завершение
+ * 			тоже самое относится и к его потоку вывода ошибок
  *   
  * @author coutvv
  */
 public class BeerBlast {
 
-	static final String COMMAND = "java ru.coutvv.puzzle.morelib.BeerBlast slave";
+	static final String COMMAND = "java -cp target/classes ru.coutvv.puzzle.morelib.BeerBlast slave";
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
 		if(args.length == 1 && args[0].equals("slave")) {
-			for(int i = 999; i > 0; i--) {
+			for(int i = 99; i > 0; i--) {
 				System.out.println(i + " bottles of beer on the wall");
 				System.out.println(i + " bottles of beer");
 				System.out.println("You take one down, pass it around,");
@@ -33,24 +34,24 @@ public class BeerBlast {
 		} else {
 			// Master
 			Process process = Runtime.getRuntime().exec(COMMAND);
-//			drainInBackground(process.getInputStream());
+//			drainInBackground(process.getInputStream()); // fix
 			int exitValue = process.waitFor(); 
 			System.out.println("exit value = " + exitValue);
 		}
 	}
 	
+	//fix
 	static void drainInBackground(final InputStream is) {
 		new Thread(new Runnable() {
 			public void run() {
 				try {
-					char c = (char) is.read();
-					while(c >= 0) {
-						c = (char) is.read();
-//						System.out.print(c);
-					}
-						
+					int c = is.read();
+					while(c >= 0){
+//						System.out.print((char)c); //если хочется вывести что выведет процесс
+						c = is.read();
+					};
 				} catch (Exception e) {
-					// TODO: handle exception
+					// this idiom so bad(I mean try/catch with silence in catch block
 				}
 			}
 		}).start();
