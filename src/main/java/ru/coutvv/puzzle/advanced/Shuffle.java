@@ -2,6 +2,7 @@ package ru.coutvv.puzzle.advanced;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -43,7 +44,7 @@ public class Shuffle {
 		for(int i = 0; i < 1000000; i++ ) {
 			String[] shits = {"shit", "fuck off", "jerk off", "bitch", "suffer", "doughbag"};
 			shuffle(shits); //original
-//			Collections.shuffle(Arrays.asList(shits)); //fixing by real code practice
+			Collections.shuffle(Arrays.asList(shits)); //fixing by real code practice
 			String key =  "\n" +Arrays.toString(shits) + " \t";
 			if(map.containsKey(key)) {
 				Integer count = map.get(key); count++;
